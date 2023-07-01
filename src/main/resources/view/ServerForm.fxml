@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: FAD4D4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServerFormController">
+   <children>
+      <JFXTextArea fx:id="areaServer" editable="false" focusColor="RED" layoutX="50.0" layoutY="118.0" prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: FFFFFF;" unFocusColor="#0900ff">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font></JFXTextArea>
+      <Text layoutX="163.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Status" wrappingWidth="265.6708984375">
+         <font>
+            <Font name="Segoe UI Black" size="32.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="87.0" fitWidth="87.0" layoutX="50.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/output-onlinegiftools.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

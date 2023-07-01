@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="550.0" style="-fx-background-color: E4EFE7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientChatBoxController">
+   <children>
+      <JFXTextArea fx:id="chatTextArea" editable="false" focusColor="RED" layoutX="23.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="590.0" prefWidth="504.0" style="-fx-background-color: ffffff; -fx-background-radius: 15;" unFocusColor="#2200ff">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextArea>
+      <Pane layoutX="22.0" layoutY="722.0" prefHeight="50.0" prefWidth="380.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;" />
+      <JFXTextField fx:id="messageTextField" focusColor="RED" layoutX="85.0" layoutY="721.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#pressEnterOnAction" prefHeight="50.0" prefWidth="267.0" promptText="Message..." style="-fx-background-color: ffffff; -fx-background-radius: 20;" unFocusColor="#0009ff">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <ImageView fx:id="emojiImageView" fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="721.0" onMouseClicked="#showEmojisOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/emoji.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="sendImageImageView" fitHeight="50.0" fitWidth="50.0" layoutX="415.0" layoutY="721.0" onMouseClicked="#sendImageOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Photo.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="sendVoiceImageView" fitHeight="50.0" fitWidth="50.0" layoutX="477.0" layoutY="721.0" onMouseClicked="#sendVoiceOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mic.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chat%20png.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="titleText" fill="#2800ab" layoutX="136.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prabhath's Fun Chat" wrappingWidth="328.6708984375">
+         <font>
+            <Font name="Calibri Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="44.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FuN ChaT">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="showNewLoginWindow" fitHeight="60.0" fitWidth="60.0" layoutX="472.0" layoutY="26.0" onMouseClicked="#showNewLoginWindowOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/new%20window.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="362.0" layoutY="731.0" prefHeight="16.0" prefWidth="5.0" text=" " />
+      <ImageView fx:id="sendMessageImageView" fitHeight="45.0" fitWidth="45.0" layoutX="352.0" layoutY="725.0" onMouseClicked="#sendMessageOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/send.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
