@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: FAD4D4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServerFormController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: FAD4D4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServerFormController">
    <children>
       <JFXTextArea fx:id="areaServer" editable="false" focusColor="RED" layoutX="50.0" layoutY="118.0" prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: FFFFFF;" unFocusColor="#0900ff">
          <font>
@@ -23,5 +25,13 @@
             <Image url="@../images/output-onlinegiftools.gif" />
          </image>
       </ImageView>
+      <JFXButton fx:id="closeButton" layoutX="336.0" layoutY="100.0" onAction="#closeServer" prefHeight="37.0" prefWidth="114.0" style="-fx-background-radius: 15; -fx-background-color: #164B60;" text="Close Server" textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>

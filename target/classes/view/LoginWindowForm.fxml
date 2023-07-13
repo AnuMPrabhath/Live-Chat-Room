@@ -8,14 +8,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: E4EFE7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginWindowFormController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: E4EFE7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginWindowFormController">
    <children>
       <JFXTextField fx:id="txtUserName" focusColor="#1e00ff" labelFloat="true" layoutX="75.0" layoutY="216.0" onAction="#enterUserName" prefHeight="52.0" prefWidth="350.0" promptText="Enter User Name..." style="-fx-background-color: ffffffff; -fx-background-radius: 15;" unFocusColor="RED">
          <font>
             <Font name="Calibri" size="22.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="joinBtn" layoutX="229.0" layoutY="293.0" onAction="#userJoinProcess" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: B8B5FF; -fx-background-radius: 15;" text="Join to Room">
+      <JFXButton fx:id="joinBtn" layoutX="209.0" layoutY="372.0" onAction="#userJoinProcess" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: B8B5FF; -fx-background-radius: 15;" text="Join to Room">
          <font>
             <Font name="Calibri Bold" size="28.0" />
          </font>
@@ -41,6 +41,11 @@
             <Font name="Calibri" size="28.0" />
          </font>
       </Text>
-      <Text fill="#595a5b" layoutX="20.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@Play Tech Pvt Ltd" wrappingWidth="169.6708984375" />
+      <Text fill="#595a5b" layoutX="20.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@Play Tech Pvt Ltd" wrappingWidth="169.6708984375" />
+      <JFXTextField fx:id="txtPassword" focusColor="#1e00ff" labelFloat="true" layoutX="75.0" layoutY="302.0" onAction="#enterPassword" prefHeight="52.0" prefWidth="350.0" promptText="Enter User Password..." style="-fx-background-color: ffffffff; -fx-background-radius: 15;" unFocusColor="RED">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>

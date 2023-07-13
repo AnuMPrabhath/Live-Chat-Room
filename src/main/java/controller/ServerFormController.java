@@ -1,14 +1,16 @@
 package controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import server.Server;
 
-import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ServerFormController implements Initializable {
@@ -16,31 +18,31 @@ public class ServerFormController implements Initializable {
     @FXML
     private JFXTextArea areaServer;
 
-    private ServerSocket serverSocket;
-    private Socket socket;
-    private DataInputStream dataInputStream;
-    private DataOutputStream dataOutputStream;
-    private BufferedReader bufferedReader;
-    private String message;
-    //private ArrayList<> arrayList;
+    @FXML
+    private AnchorPane root;
+
+    @FXML
+    private JFXButton closeButton;
+
+    @FXML
+    void closeServer(ActionEvent event) {
+        System.exit(0);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        new Thread(() -> {
-            try {
-                serverSocket = new ServerSocket(3002);
-                socket = serverSocket.accept();
-                areaServer.appendText("\tServer Started..!\n\n");
-                dataInputStream = new DataInputStream(socket.getInputStream());
-                dataOutputStream = new DataOutputStream(socket.getOutputStream());
-                bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                while (bufferedReader.equals("finish")){
-                    message = dataInputStream.readUTF();
-                }
+        try {
+            Server server = Server.getServerSocket();
+            Thread thread = new Thread(server);
+            thread.start();
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }).start();
+            areaServer.appendText("Server Started..!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+     /*static void appendText(String msg){
+        areaServer.appendText(msg);
+    }*/
 }
